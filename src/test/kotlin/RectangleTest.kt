@@ -9,11 +9,12 @@ class RectangleTest {
         val point2 = Point(4.0, 8.0)
         val rectangle = Rectangle(point1, point2)
         rectangle.move(2.0, -1.0)
+
         assertEquals(3.0, rectangle.getPoint1().getX())
         assertEquals(0.0, rectangle.getPoint1().getY())
 
         assertEquals(6.0, rectangle.getPoint2().getX())
-        assertEquals(0.0, rectangle.getPoint2().getY())
+        assertEquals(7.0, rectangle.getPoint2().getY())
     }
 
     @Test
