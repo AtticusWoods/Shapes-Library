@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Assertions.assertEquals
+import kotlin.math.sqrt
 
 class LineTest {
 
@@ -8,7 +9,7 @@ class LineTest {
         val point1 = Point(1.0, 1.0)
         val point2 = Point(4.0, 5.0)
         val line = Line(point1, point2)
-        assertEquals(5.0, line.getLength())
+        assertEquals(sqrt(9.0 + 16.0), line.getLength())
     }
 
     @Test
