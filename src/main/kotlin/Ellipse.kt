@@ -1,6 +1,11 @@
 import kotlin.math.PI
 
-class Ellipse(center: Point, private val radiusX: Double, private val radiusY: Double) : Circle(center, 0.0) {
+open class Ellipse(private val center: Point, private val radiusX: Double, private val radiusY: Double){
+
+    // Getter for center
+    fun getCenter(): Point {
+        return center
+    }
 
     // Getter for xRadius
     fun getXRadius(): Double {
@@ -13,7 +18,12 @@ class Ellipse(center: Point, private val radiusX: Double, private val radiusY: D
     }
 
     // Calculate the area of the ellipse
-    override fun getArea(): Double {
+    fun getArea(): Double {
         return PI * radiusX * radiusY
+    }
+
+    // Move the point by deltaX and deltaY
+    fun move(deltaX: Double, deltaY: Double) {
+        center.move(deltaX, deltaY)
     }
 }
