@@ -27,8 +27,17 @@ class CircleTest {
     fun testArea() {
         val center = Point(0.0, 0.0)
         val radius = 5.0
-        val square = Circle(center, radius)
-        assertEquals(PI * radius * radius, square.getArea())
+        val circle = Circle(center, radius)
+        assertEquals(PI * radius * radius, circle.getArea())
+
+    }
+
+    @Test
+    fun testRadius() {
+        val center = Point(0.0, 0.0)
+        val radius = 5.0
+        val circle = Circle(center, radius)
+        assertEquals(radius, circle.getRadius())
 
     }
 }
