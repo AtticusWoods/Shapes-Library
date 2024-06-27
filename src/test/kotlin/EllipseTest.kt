@@ -31,6 +31,25 @@ class EllipseTest {
         val radius2 = 4.0
         val square = Ellipse(center, radius1, radius2)
         assertEquals(PI * radius1 * radius2, square.getArea())
+    }
+
+    @Test
+    fun testRadiusX() {
+        val center = Point(0.0, 0.0)
+        val radius1 = 5.0
+        val radius2 = 4.0
+        val ellipse = Ellipse(center, radius1, radius2)
+        assertEquals(radius1, ellipse.getRadiusX())
+
+    }
+
+    @Test
+    fun testRadiusY() {
+        val center = Point(0.0, 0.0)
+        val radius1 = 5.0
+        val radius2 = 4.0
+        val ellipse = Ellipse(center, radius1, radius2)
+        assertEquals(radius2, ellipse.getRadiusY())
 
     }
 }

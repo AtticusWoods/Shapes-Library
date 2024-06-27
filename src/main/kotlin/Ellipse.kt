@@ -8,12 +8,12 @@ open class Ellipse(private val center: Point, private val radiusX: Double, priva
     }
 
     // Getter for xRadius
-    fun getXRadius(): Double {
+    fun getRadiusX(): Double {
         return radiusX
     }
 
     // Getter for yRadius
-    fun getYRadius(): Double {
+    fun getRadiusY(): Double {
         return radiusY
     }
 
