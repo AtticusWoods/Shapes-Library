@@ -12,7 +12,7 @@ open class Circle(private var center: Point, private var radius: Double) {
     }
 
     // Get area
-    fun getArea(): Double {
+    open fun getArea(): Double {
         return PI * radius * radius
     }
 

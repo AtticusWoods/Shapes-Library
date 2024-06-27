@@ -7,8 +7,8 @@ class CircleTest {
     @Test
     fun testMove() {
         val center = Point(0.0, 0.0)
-        val radius1 = 5.0
-        val circle = Circle(center, radius1)
+        val radius = 5.0
+        val circle = Circle(center, radius)
         circle.move(2.0, -1.0)
         assertEquals(2.0, circle.getCenter().getX())
         assertEquals(-1.0, circle.getCenter().getY())
@@ -17,8 +17,8 @@ class CircleTest {
     @Test
     fun testGetPoints() {
         val center = Point(0.0, 0.0)
-        val radius1 = 5.0
-        val square = Circle(center, radius1)
+        val radius = 5.0
+        val circle = Circle(center, radius)
         circle.move(2.0, -1.0)
         assertEquals(center, circle.getCenter())
     }
@@ -26,9 +26,9 @@ class CircleTest {
     @Test
     fun testArea() {
         val center = Point(0.0, 0.0)
-        val radius1 = 5.0
-        val square = Circle(center, radius1)
-        assertEquals(PI * radius1 * radius1, square.getArea())
+        val radius = 5.0
+        val square = Circle(center, radius)
+        assertEquals(PI * radius * radius, square.getArea())
 
     }
 }
