@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.assertThrows
 import kotlin.math.sqrt
 
 class LineTest {
@@ -10,6 +11,16 @@ class LineTest {
         val point2 = Point(4.0, 5.0)
         val line = Line(point1, point2)
         assertEquals(sqrt(9.0 + 16.0), line.getLength())
+    }
+
+    @Test
+    fun testLengthZero() {
+        val point1 = Point(1.0, 1.0)
+        val point2 = Point(1.0, 1.0)
+        val exception = assertThrows<Exception> {
+            val line = Line(point1, point2)
+        }
+        assertEquals("Lines must have a length greater than 0", exception.message)
     }
 
     @Test
