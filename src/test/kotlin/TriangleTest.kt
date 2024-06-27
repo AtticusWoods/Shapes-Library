@@ -28,4 +28,14 @@ class TriangleTest {
         assertEquals(point2, triangle.getPoint2())
         assertEquals(point3, triangle.getPoint3())
     }
+
+    @Test
+    fun testArea() {
+        val point1 = Point(0.0, 0.0)
+        val point2 = Point(0.0, 2.0)
+        val point3 = Point(3.0, 0.0)
+        val triangle = Triangle(point1, point2, point3)
+        assertEquals(3.0, triangle.getArea())
+
+    }
 }
