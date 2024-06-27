@@ -39,7 +39,4 @@ class LineTest {
         assertEquals(point1, line.getPoint1())
         assertEquals(point2, line.getPoint2())
     }
-
-
-    // Add more tests as per Line class requirements
 }
