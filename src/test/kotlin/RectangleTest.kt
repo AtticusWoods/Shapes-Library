@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.assertThrows
 
 class RectangleTest {
 
@@ -33,5 +34,15 @@ class RectangleTest {
         val rectangle = Rectangle(point1, point2)
         assertEquals(21.0, rectangle.getArea())
 
+    }
+
+    @Test
+    fun testWidthHeight() {
+        val point1 = Point(1.0, 1.0)
+        val point2 = Point(1.0, 1.0)
+        val exception = assertThrows<Exception> {
+            val rectangle = Rectangle(point1, point2)
+        }
+        assertEquals("A rectangle cannot have 0 width or height", exception.message)
     }
 }

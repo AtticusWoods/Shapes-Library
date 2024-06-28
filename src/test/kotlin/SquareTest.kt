@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.assertThrows
 
 class SquareTest {
 
@@ -44,5 +45,15 @@ class SquareTest {
 //        val square = Square(point1, point2, point3, point4)
 //        assertEquals(true, )
 //    }
+
+    @Test
+    fun testTrueSquare() {
+        val point1 = Point(1.0, 1.0)
+        val point2 = Point(2.0, 3.0)
+        val exception = assertThrows<Exception> {
+            val square = Square(point1, point2)
+        }
+        assertEquals("A square must have equal width or height", exception.message)
+    }
 
 }
