@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.assertThrows
 import kotlin.math.PI
 
 class CircleTest {
@@ -39,5 +40,15 @@ class CircleTest {
         val circle = Circle(center, radius)
         assertEquals(radius, circle.getRadius())
 
+    }
+
+    @Test
+    fun testRadiusNot0() {
+        val center = Point(0.0, 0.0)
+        val radius = 0.0
+        val exception = assertThrows<Exception> {
+            val circle = Circle(center, radius)
+        }
+        assertEquals("An ellipse cannot have a radius of 0", exception.message)
     }
 }

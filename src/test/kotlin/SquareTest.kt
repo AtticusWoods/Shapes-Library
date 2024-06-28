@@ -46,4 +46,14 @@ class SquareTest {
         assertEquals("A square must have equal width and height", exception.message)
     }
 
+    @Test
+    fun testWidthHeight() {
+        val point1 = Point(1.0, 1.0)
+        val point2 = Point(1.0, 1.0)
+        val exception = assertThrows<Exception> {
+            val square = Square(point1, point2)
+        }
+        assertEquals("A rectangle cannot have 0 width or height", exception.message)
+    }
+
 }
