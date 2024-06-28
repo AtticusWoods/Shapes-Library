@@ -31,7 +31,7 @@ class Line(private var point1: Point, private var point2: Point) {
         return sqrt((x*x) + (y*y))
     }
 
-    // Move the line by deltaX and deltaY
+
     fun move(deltaX: Double, deltaY: Double) {
         point1.move(deltaX, deltaY)
         point2.move(deltaX, deltaY)
