@@ -12,7 +12,7 @@ data class Point(private var x: Double, private var y: Double) {
 
     // Clone the point
     fun clone(): Point {
-        return copy()  // Using the auto-generated copy() method
+        return copy()
     }
 
     // Move the point by deltaX and deltaY

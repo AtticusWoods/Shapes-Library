@@ -1,4 +1,4 @@
-open class Square(private var point1: Point, private var point2: Point) : Rectangle(point1, point2) {
+open class Square(point1: Point, point2: Point) : Rectangle(point1, point2) {
 
     init {
         val y = point1.getY() - point2.getY()
