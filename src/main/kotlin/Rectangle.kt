@@ -1,5 +1,14 @@
 open class Rectangle (private var point1: Point, private var point2: Point){
 
+    init {
+        val y = point1.getY() - point2.getY()
+        val x = point1.getX() - point2.getX()
+
+        if(x == 0.0 || y == 0.0){
+            throw Exception("A rectangle cannot have 0 width or height")
+        }
+    }
+
     open fun getArea(): Double {
         val y = point1.getY() - point2.getY()
         val x = point1.getX() - point2.getX()
