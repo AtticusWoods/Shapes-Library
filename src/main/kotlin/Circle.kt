@@ -1,6 +1,4 @@
-import kotlin.math.PI
-
-class Circle(private var center: Point, private var radius: Double)  : Ellipse(center, radius, radius) {
+class Circle(center: Point, private var radius: Double)  : Ellipse(center, radius, radius) {
 
     init {
         if(radius == 0.0) {

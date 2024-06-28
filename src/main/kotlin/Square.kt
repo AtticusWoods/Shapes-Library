@@ -8,5 +8,4 @@ open class Square(point1: Point, point2: Point) : Rectangle(point1, point2) {
             throw Exception("A square must have equal width and height")
         }
     }
-
 }

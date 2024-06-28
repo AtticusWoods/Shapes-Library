@@ -36,6 +36,4 @@ class Line(private var point1: Point, private var point2: Point) {
         point1.move(deltaX, deltaY)
         point2.move(deltaX, deltaY)
     }
-
-
 }
