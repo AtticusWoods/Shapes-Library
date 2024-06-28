@@ -36,16 +36,6 @@ class SquareTest {
 
     }
 
-//    @Test
-//    fun testTrueSquare() {
-//        val point1 = Point(0.0, 0.0)
-//        val point2 = Point(4.0, 0.0)
-//        val point3 = Point(4.0, 4.0)
-//        val point4 = Point(0.0, 4.0)
-//        val square = Square(point1, point2, point3, point4)
-//        assertEquals(true, )
-//    }
-
     @Test
     fun testTrueSquare() {
         val point1 = Point(1.0, 1.0)
@@ -53,7 +43,7 @@ class SquareTest {
         val exception = assertThrows<Exception> {
             val square = Square(point1, point2)
         }
-        assertEquals("A square must have equal width or height", exception.message)
+        assertEquals("A square must have equal width and height", exception.message)
     }
 
 }
