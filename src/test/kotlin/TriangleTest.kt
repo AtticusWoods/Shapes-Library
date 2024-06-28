@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.assertThrows
 
 class TriangleTest {
 
@@ -36,6 +37,17 @@ class TriangleTest {
         val point3 = Point(3.0, 0.0)
         val triangle = Triangle(point1, point2, point3)
         assertEquals(3.0, triangle.getArea())
+    }
 
+    @Test
+    fun testWidthHeight() {
+        val point1 = Point(1.0, 1.0)
+        val point2 = Point(4.0, 1.0)
+        val point3 = Point(8.0, 1.0)
+
+        val exception = assertThrows<Exception> {
+            val triangle = Triangle(point1, point2, point3)
+        }
+        assertEquals("A triangle must not have an area of 0", exception.message)
     }
 }
